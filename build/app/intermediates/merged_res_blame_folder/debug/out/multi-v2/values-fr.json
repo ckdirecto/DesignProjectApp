@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/claudeedirecto/Desktop/Scratch-DesignApp/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-fr/values-fr.xml",
+            "outputFile": "/Users/claudeedirecto/Desktop/DesignApp/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-fr/values-fr.xml",
             "map": [
                 {
                     "source": "/Users/claudeedirecto/.gradle/caches/transforms-3/6b099d239d44b12fac32ffd17bec3825/transformed/core-1.1.0/res/values-fr/values-fr.xml",

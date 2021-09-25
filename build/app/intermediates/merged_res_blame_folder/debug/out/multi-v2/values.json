@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/claudeedirecto/Desktop/Scratch-DesignApp/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+            "outputFile": "/Users/claudeedirecto/Desktop/DesignApp/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
             "map": [
                 {
                     "source": "/Users/claudeedirecto/.gradle/caches/transforms-3/6b099d239d44b12fac32ffd17bec3825/transformed/core-1.1.0/res/values/values.xml",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/Users/claudeedirecto/Desktop/Scratch-DesignApp/android/app/src/main/res/values/styles.xml",
+                    "source": "/Users/claudeedirecto/Desktop/DesignApp/android/app/src/main/res/values/styles.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
