@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Plant Shop',
       theme: ThemeData(
-        primaryColor: kPrimaryColor,
+        primaryColor: PrimaryColor,
         scaffoldBackgroundColor: Colors.white,
       ),
       home: WelcomeScreen(),

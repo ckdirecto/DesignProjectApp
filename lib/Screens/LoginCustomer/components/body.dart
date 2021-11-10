@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:plant_shop/Screens/Signup/components/background.dart';
+import 'package:plant_shop/Screens/PlantList/shop_screen.dart';
+import 'package:plant_shop/Screens/LoginCustomer/components/background.dart';
 import 'package:plant_shop/components/rounded_button.dart';
 import 'package:plant_shop/components/rounded_input_field.dart';
 
@@ -50,7 +51,16 @@ class Body extends StatelessWidget {
             ),
             RoundedButton(
               text: "Proceed",
-              press: () {},
+              press: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return ShopScreen();
+                    },
+                  ),
+                );
+              },
             ),
             SizedBox(height: size.height * 0.03),
           ],

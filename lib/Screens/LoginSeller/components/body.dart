@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:plant_shop/Screens/Login/components/background.dart';
+import 'package:plant_shop/Screens/LoginSeller/components/background.dart';
 import 'package:plant_shop/components/rounded_button.dart';
 import 'package:plant_shop/components/rounded_input_field.dart';
 import 'package:plant_shop/components/rounded_password_field.dart';

@@ -1,4 +1,4 @@
-#Sat Sep 25 23:33:19 PST 2021
+#Wed Nov 10 23:52:36 PST 2021
 base.0=/Users/claudeedirecto/Desktop/DesignApp/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
 renamed.0=classes.dex
 path.0=classes.dex

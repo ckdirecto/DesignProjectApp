@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:plant_shop/Screens/Login/login_screen.dart';
-import 'package:plant_shop/Screens/Signup/signup_screen.dart';
+import 'package:plant_shop/Screens/LoginSeller/loginseller.dart';
+import 'package:plant_shop/Screens/LoginCustomer/logincustomer.dart';
 import 'package:plant_shop/Screens/Welcome/components/background.dart';
 import 'package:plant_shop/components/rounded_button.dart';
 import 'package:plant_shop/constants.dart';
@@ -39,7 +39,7 @@ class Body extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return LoginScreen();
+                      return LoginSeller();
                     },
                   ),
                 );
@@ -47,14 +47,14 @@ class Body extends StatelessWidget {
             ),
             RoundedButton(
               text: "Customer",
-              color: kPrimaryColor,
+              color: PrimaryColor,
               textColor: Colors.white,
               press: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return SignUpScreen();
+                      return LoginCustomer();
                     },
                   ),
                 );
