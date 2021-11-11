@@ -19,7 +19,7 @@ class ShopScreenState extends State<ShopScreen>
     pageController = PageController(initialPage: 0, viewportFraction: 0.8);
   }
 
-  _plantSelector(int index) {
+  plantSelector(int index) {
     return AnimatedBuilder(
       animation: pageController,
       builder: (BuildContext context, Widget widget) {
@@ -168,7 +168,7 @@ class ShopScreenState extends State<ShopScreen>
                 },
                 itemCount: plants.length,
                 itemBuilder: (BuildContext context, int index) {
-                  return _plantSelector(index);
+                  return plantSelector(index);
                 },
               ),
             ),

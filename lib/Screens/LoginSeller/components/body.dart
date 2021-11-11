@@ -3,6 +3,7 @@ import 'package:plant_shop/Screens/LoginSeller/components/background.dart';
 import 'package:plant_shop/components/rounded_button.dart';
 import 'package:plant_shop/components/rounded_input_field.dart';
 import 'package:plant_shop/components/rounded_password_field.dart';
+import 'package:plant_shop/Screens/OptionSeller/optionbody.dart';
 
 class Body extends StatelessWidget {
   const Body({
@@ -54,7 +55,16 @@ class Body extends StatelessWidget {
             ),
             RoundedButton(
               text: "Login",
-              press: () {},
+              press: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return OptionSellerBody();
+                    },
+                  ),
+                );
+              },
             ),
             SizedBox(height: size.height * 0.03),
           ],
