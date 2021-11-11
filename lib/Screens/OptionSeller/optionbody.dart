@@ -26,6 +26,7 @@ class OptionSellerBody extends StatelessWidget {
               "plant shop",
               style: TextStyle(
                 decoration: TextDecoration.none,
+                color: Colors.black,
                 fontSize: 28.0,
                 fontFamily: 'Comfortaa',
                 fontWeight: FontWeight.w400,
