@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:plant_shop/Screens/Welcome/components/background.dart';
 import 'package:plant_shop/constants.dart';
 import 'package:plant_shop/components/optionseller.dart';
-import 'package:plant_shop/Screens/LoginSeller/loginseller.dart';
-import 'package:plant_shop/Screens/LoginCustomer/logincustomer.dart';
+import 'package:plant_shop/Screens/Inventory/inventory.dart';
+import 'package:plant_shop/Screens/Transactions/transactions.dart';
 
 class OptionSellerBody extends StatelessWidget {
   @override
@@ -40,7 +40,7 @@ class OptionSellerBody extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return LoginSeller();
+                      return Inventory();
                     },
                   ),
                 );
@@ -55,7 +55,7 @@ class OptionSellerBody extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return LoginCustomer();
+                      return Transaction();
                     },
                   ),
                 );
