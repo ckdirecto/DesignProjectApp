@@ -6,7 +6,7 @@ import 'package:plant_shop/components/rounded_input_field.dart';
 
 class Body extends StatelessWidget {
   const Body({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override

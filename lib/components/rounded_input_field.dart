@@ -3,11 +3,11 @@ import 'package:plant_shop/components/text_field_container.dart';
 import 'package:plant_shop/constants.dart';
 
 class RoundedInputField extends StatelessWidget {
-  final String hintText;
+  final String? hintText;
   final IconData icon;
-  final ValueChanged<String> onChanged;
+  final ValueChanged<String>? onChanged;
   const RoundedInputField({
-    Key key,
+    Key? key,
     this.hintText,
     this.icon = Icons.person,
     this.onChanged,

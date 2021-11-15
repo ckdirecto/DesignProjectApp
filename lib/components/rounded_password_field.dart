@@ -3,9 +3,9 @@ import 'package:plant_shop/components/text_field_container.dart';
 import 'package:plant_shop/constants.dart';
 
 class RoundedPasswordField extends StatelessWidget {
-  final ValueChanged<String> onChanged;
+  final ValueChanged<String>? onChanged;
   const RoundedPasswordField({
-    Key key,
+    Key? key,
     this.onChanged,
   }) : super(key: key);
 

@@ -10,7 +10,7 @@ class ShopScreen extends StatefulWidget {
 
 class ShopScreenState extends State<ShopScreen>
     with SingleTickerProviderStateMixin {
-  PageController pageController;
+  PageController? pageController;
   int selectedPage = 0;
 
   @override
@@ -21,11 +21,11 @@ class ShopScreenState extends State<ShopScreen>
 
   plantSelector(int index) {
     return AnimatedBuilder(
-      animation: pageController,
-      builder: (BuildContext context, Widget widget) {
+      animation: pageController!,
+      builder: (BuildContext context, Widget? widget) {
         double value = 1;
-        if (pageController.position.haveDimensions) {
-          value = pageController.page - index;
+        if (pageController!.position.haveDimensions) {
+          value = pageController!.page! - index;
           value = (1 - (value.abs() * 0.1)).clamp(0.1, 1.0);
         }
         return Center(
@@ -58,7 +58,7 @@ class ShopScreenState extends State<ShopScreen>
                 children: <Widget>[
                   Center(
                     child: Hero(
-                      tag: plants[index].imageUrl,
+                      tag: plants[index].imageUrl!,
                       child: Image(
                         height: 120.0,
                         width: 120.0,
@@ -100,7 +100,7 @@ class ShopScreenState extends State<ShopScreen>
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Text(
-                          plants[index].category.toUpperCase(),
+                          plants[index].category!.toUpperCase(),
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 15.0,
@@ -108,7 +108,7 @@ class ShopScreenState extends State<ShopScreen>
                         ),
                         SizedBox(height: 5.0),
                         Text(
-                          plants[index].name,
+                          plants[index].name!,
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 25.0,

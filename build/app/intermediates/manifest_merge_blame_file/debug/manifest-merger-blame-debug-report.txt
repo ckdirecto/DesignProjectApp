@@ -1,6 +1,6 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-3    package="com.example.flutter_auth"
+3    package="com.plantshop.design_proj"
 4    android:versionCode="1"
 5    android:versionName="1.0.0" >
 6
@@ -26,7 +26,7 @@
 23        android:name="io.flutter.app.FlutterApplication"
 23-->/Users/claudeedirecto/Desktop/DesignApp/android/app/src/main/AndroidManifest.xml:9:9-57
 24        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-24-->[androidx.core:core:1.1.0] /Users/claudeedirecto/.gradle/caches/transforms-3/6b099d239d44b12fac32ffd17bec3825/transformed/core-1.1.0/AndroidManifest.xml:24:18-86
+24-->[androidx.core:core:1.1.0] /Users/claudeedirecto/.gradle/caches/transforms-3/3ead1d3ee83164dad2ff90fe7dfbd590/transformed/core-1.1.0/AndroidManifest.xml:24:18-86
 25        android:debuggable="true"
 26        android:icon="@mipmap/ic_launcher"
 26-->/Users/claudeedirecto/Desktop/DesignApp/android/app/src/main/AndroidManifest.xml:11:9-43

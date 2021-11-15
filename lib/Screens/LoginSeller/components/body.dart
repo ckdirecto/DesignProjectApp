@@ -7,7 +7,7 @@ import 'package:plant_shop/Screens/OptionSeller/optionbody.dart';
 
 class Body extends StatelessWidget {
   const Body({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override

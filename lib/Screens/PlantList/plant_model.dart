@@ -1,10 +1,10 @@
 class Plant {
-  final String imageUrl;
-  final String name;
-  final String category;
-  final int price;
-  final String size;
-  final String description;
+  final String? imageUrl;
+  final String? name;
+  final String? category;
+  final int? price;
+  final String? size;
+  final String? description;
 
   Plant({
     this.imageUrl,

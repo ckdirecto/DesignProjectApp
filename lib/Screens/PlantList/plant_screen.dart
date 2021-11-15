@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:plant_shop/Screens/PlantList/plant_model.dart';
 
 class PlantScreen extends StatefulWidget {
-  final Plant plant;
+  final Plant? plant;
 
   PlantScreen({this.plant});
 
@@ -49,7 +49,7 @@ class PlantScreenState extends State<PlantScreen> {
                         ),
                         SizedBox(height: 20.0),
                         Text(
-                          widget.plant.category.toUpperCase(),
+                          widget.plant!.category!.toUpperCase(),
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 15.0,
@@ -57,7 +57,7 @@ class PlantScreenState extends State<PlantScreen> {
                         ),
                         SizedBox(height: 5.0),
                         Text(
-                          widget.plant.name,
+                          widget.plant!.name!,
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 30.0,
@@ -74,7 +74,7 @@ class PlantScreenState extends State<PlantScreen> {
                         ),
                         SizedBox(height: 5.0),
                         Text(
-                          '\PHP ${widget.plant.price}',
+                          '\PHP ${widget.plant!.price}',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 25.0,
@@ -91,7 +91,7 @@ class PlantScreenState extends State<PlantScreen> {
                         ),
                         SizedBox(height: 5.0),
                         Text(
-                          widget.plant.size,
+                          widget.plant!.size!,
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 25.0,
@@ -106,11 +106,11 @@ class PlantScreenState extends State<PlantScreen> {
                     right: 20.0,
                     bottom: 30.0,
                     child: Hero(
-                      tag: widget.plant.imageUrl,
+                      tag: widget.plant!.imageUrl!,
                       child: Image(
                         height: 280.0,
                         width: 280.0,
-                        image: AssetImage(widget.plant.imageUrl),
+                        image: AssetImage(widget.plant!.imageUrl!),
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -145,7 +145,7 @@ class PlantScreenState extends State<PlantScreen> {
                           ),
                           SizedBox(height: 10.0),
                           Text(
-                            widget.plant.description,
+                            widget.plant!.description!,
                             style: TextStyle(
                               color: Colors.black87,
                               fontSize: 16.0,
