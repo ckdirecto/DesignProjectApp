@@ -1,20 +1,18 @@
 {
-  "version": 3,
+  "version": 2,
   "artifactType": {
     "type": "MERGED_MANIFESTS",
     "kind": "Directory"
   },
-  "applicationId": "com.plantshop.design_proj",
+  "applicationId": "com.example.firebase_trial_app",
   "variantName": "debug",
   "elements": [
     {
       "type": "SINGLE",
       "filters": [],
-      "attributes": [],
       "versionCode": 1,
       "versionName": "1.0.0",
       "outputFile": "AndroidManifest.xml"
     }
-  ],
-  "elementType": "File"
+  ]
 }

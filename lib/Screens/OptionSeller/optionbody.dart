@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:plant_shop/Screens/Welcome/components/background.dart';
-import 'package:plant_shop/constants.dart';
-import 'package:plant_shop/components/optionseller.dart';
-import 'package:plant_shop/Screens/Inventory/inventory.dart';
-import 'package:plant_shop/Screens/Transactions/transactions.dart';
+import 'package:firebase_trial_app/Screens/Welcome/components/background.dart';
+import 'package:firebase_trial_app/constants.dart';
+import 'package:firebase_trial_app/components/optionseller.dart';
+import 'package:firebase_trial_app/Screens/Inventory/inventory.dart';
+import 'package:firebase_trial_app/Screens/Transactions/transactions.dart';
 
 class OptionSellerBody extends StatelessWidget {
   @override

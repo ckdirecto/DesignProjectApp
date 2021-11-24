@@ -1,20 +1,18 @@
 {
-  "version": 3,
+  "version": 2,
   "artifactType": {
     "type": "PROCESSED_RES",
     "kind": "Directory"
   },
-  "applicationId": "com.plantshop.design_proj",
-  "variantName": "debug",
+  "applicationId": "com.example.firebase_trial_app",
+  "variantName": "processDebugResources",
   "elements": [
     {
       "type": "SINGLE",
       "filters": [],
-      "attributes": [],
       "versionCode": 1,
       "versionName": "1.0.0",
       "outputFile": "resources-debug.ap_"
     }
-  ],
-  "elementType": "File"
+  ]
 }

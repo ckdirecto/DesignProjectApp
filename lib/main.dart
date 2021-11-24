@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:plant_shop/Screens/Welcome/welcome_screen.dart';
-import 'package:plant_shop/constants.dart';
+import 'package:firebase_trial_app/Screens/Welcome/welcome_screen.dart';
+import 'package:firebase_trial_app/constants.dart';
 
 void main() => runApp(MyApp());
 

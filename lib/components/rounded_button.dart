@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:plant_shop/constants.dart';
+import 'package:firebase_trial_app/constants.dart';
 
 class RoundedButton extends StatelessWidget {
   final String? text;

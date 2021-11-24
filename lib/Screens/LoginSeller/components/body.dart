@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:plant_shop/Screens/LoginSeller/components/background.dart';
-import 'package:plant_shop/components/rounded_button.dart';
-import 'package:plant_shop/components/rounded_input_field.dart';
-import 'package:plant_shop/components/rounded_password_field.dart';
-import 'package:plant_shop/Screens/OptionSeller/optionbody.dart';
+import 'package:firebase_trial_app/Screens/LoginSeller/components/background.dart';
+import 'package:firebase_trial_app/components/rounded_button.dart';
+import 'package:firebase_trial_app/components/rounded_input_field.dart';
+import 'package:firebase_trial_app/components/rounded_password_field.dart';
+import 'package:firebase_trial_app/main1.dart';
 
 class Body extends StatelessWidget {
   const Body({
@@ -60,7 +60,7 @@ class Body extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return OptionSellerBody();
+                      return MyHomePage();
                     },
                   ),
                 );

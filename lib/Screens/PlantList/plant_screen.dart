@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:plant_shop/Screens/PlantList/plant_model.dart';
+import 'package:firebase_trial_app/Screens/PlantList/plant_model.dart';
 
 class PlantScreen extends StatefulWidget {
   final Plant? plant;

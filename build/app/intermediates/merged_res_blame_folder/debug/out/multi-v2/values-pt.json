@@ -4,7 +4,7 @@
             "outputFile": "/Users/claudeedirecto/Desktop/DesignApp/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-pt/values-pt.xml",
             "map": [
                 {
-                    "source": "/Users/claudeedirecto/.gradle/caches/transforms-3/3ead1d3ee83164dad2ff90fe7dfbd590/transformed/core-1.1.0/res/values-pt/values-pt.xml",
+                    "source": "/Users/claudeedirecto/.gradle/caches/transforms-2/files-2.1/3c8fd1bfddb99a7a7e21faa1397acdb4/core-1.1.0/res/values-pt/values-pt.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

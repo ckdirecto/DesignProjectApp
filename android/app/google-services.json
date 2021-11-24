@@ -8,6 +8,64 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:538673036023:android:eef26f6f03a6970312b1f2",
+        "android_client_info": {
+          "package_name": "com.example.firebase_trial_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "538673036023-63hq07hc7rccdunoe2o1i9dklipclchh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwNY15flulsYGJaX1OBBr32VttsQjERQs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "538673036023-63hq07hc7rccdunoe2o1i9dklipclchh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:538673036023:android:3d19b4a410b3288012b1f2",
+        "android_client_info": {
+          "package_name": "com.example.plantshop_designproj"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "538673036023-63hq07hc7rccdunoe2o1i9dklipclchh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwNY15flulsYGJaX1OBBr32VttsQjERQs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "538673036023-63hq07hc7rccdunoe2o1i9dklipclchh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:538673036023:android:fede27761e11581312b1f2",
         "android_client_info": {
           "package_name": "com.plantshop.design_proj"

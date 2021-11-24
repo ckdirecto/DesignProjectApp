@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:plant_shop/Screens/LoginSeller/loginseller.dart';
-import 'package:plant_shop/Screens/LoginCustomer/logincustomer.dart';
-import 'package:plant_shop/Screens/Welcome/components/background.dart';
-import 'package:plant_shop/components/rounded_button.dart';
-import 'package:plant_shop/constants.dart';
+import 'package:firebase_trial_app/Screens/LoginSeller/loginseller.dart';
+import 'package:firebase_trial_app/Screens/LoginCustomer/logincustomer.dart';
+import 'package:firebase_trial_app/Screens/Welcome/components/background.dart';
+import 'package:firebase_trial_app/components/rounded_button.dart';
+import 'package:firebase_trial_app/constants.dart';
 
 class Body extends StatelessWidget {
   @override

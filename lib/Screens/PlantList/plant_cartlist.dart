@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:plant_shop/Screens/PlantList/shop_screen.dart';
+import 'package:firebase_trial_app/Screens/PlantList/shop_screen.dart';
 
 class PlantCartlist extends StatelessWidget {
   // This widget is the root of your application.

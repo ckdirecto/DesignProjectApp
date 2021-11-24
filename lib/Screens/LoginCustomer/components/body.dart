@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:plant_shop/Screens/PlantList/shop_screen.dart';
-import 'package:plant_shop/Screens/LoginCustomer/components/background.dart';
-import 'package:plant_shop/components/rounded_button.dart';
-import 'package:plant_shop/components/rounded_input_field.dart';
+import 'package:firebase_trial_app/Screens/PlantList/shop_screen.dart';
+import 'package:firebase_trial_app/Screens/LoginCustomer/components/background.dart';
+import 'package:firebase_trial_app/components/rounded_button.dart';
+import 'package:firebase_trial_app/components/rounded_input_field.dart';
 
 class Body extends StatelessWidget {
   const Body({

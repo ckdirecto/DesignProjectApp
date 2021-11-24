@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:plant_shop/Screens/OptionSeller/optionbody.dart';
+import 'package:firebase_trial_app/Screens/OptionSeller/optionbody.dart';
 
 class OptionSeller extends StatelessWidget {
   @override
