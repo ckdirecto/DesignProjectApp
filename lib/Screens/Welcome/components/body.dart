@@ -47,7 +47,7 @@ class Body extends StatelessWidget {
             ),
             RoundedButton(
               text: "Customer",
-              color: PrimaryColor,
+              color: primaryColor,
               textColor: Colors.white,
               press: () {
                 Navigator.push(

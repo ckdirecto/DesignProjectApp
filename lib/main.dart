@@ -5,6 +5,8 @@ import 'package:firebase_trial_app/constants.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -12,7 +14,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Plant Shop',
       theme: ThemeData(
-        primaryColor: PrimaryColor,
+        primaryColor: primaryColor,
         scaffoldBackgroundColor: Colors.white,
       ),
       home: WelcomeScreen(),

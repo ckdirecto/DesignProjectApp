@@ -48,7 +48,7 @@ class OptionSellerBody extends StatelessWidget {
             ),
             OptionSellerButton(
               text: "Transactions",
-              color: PrimaryColor,
+              color: primaryColor,
               textColor: Colors.white,
               press: () {
                 Navigator.push(
