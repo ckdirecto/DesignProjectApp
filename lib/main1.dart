@@ -1,7 +1,9 @@
+import 'package:firebase_trial_app/constants.dart';
 import 'package:firebase_trial_app/realtime_db/display_inventory.dart';
 import 'package:firebase_trial_app/realtime_db/display_transactions.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_trial_app/components/rounded_button.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -22,18 +24,37 @@ class _MyHomePageState extends State<MyHomePage> {
         body: SafeArea(
       child: Center(
         child: Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: EdgeInsets.all(80.0),
             child: Column(
-              children: [
+              children: <Widget>[
+                Positioned(
+                  top: 0,
+                  left: 0,
+                  child: Image.asset(
+                    "assets/images/shop-logo.png",
+                    width: Size.width * 0.3,
+                  ),
+                ),
+                Text(
+                  "plant shop",
+                  style: TextStyle(
+                    decoration: TextDecoration.none,
+                    fontSize: 28.0,
+                    fontFamily: 'Comfortaa',
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
                 const Text(
-                  "Inventory",
-                  style: TextStyle(color: Colors.orangeAccent, fontSize: 30),
+                  "Seller Interface",
+                  style: TextStyle(
+                      color: primaryColor, fontFamily: 'Poppins', fontSize: 30),
                 ),
                 const SizedBox(
                   height: 15,
                 ),
-                ElevatedButton(
-                  onPressed: () {
+                RoundedButton(
+                  text: "View Inventory",
+                  press: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
@@ -41,13 +62,10 @@ class _MyHomePageState extends State<MyHomePage> {
                               const RealtimeDatabaseDisplay()),
                     );
                   },
-                  child: const Text(
-                    "View Inventory",
-                    style: TextStyle(color: Colors.white),
-                  ),
                 ),
-                ElevatedButton(
-                  onPressed: () {
+                RoundedButton(
+                  text: "View Transactions",
+                  press: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
@@ -55,10 +73,6 @@ class _MyHomePageState extends State<MyHomePage> {
                               const RealtimeTransactionsDisplay()),
                     );
                   },
-                  child: const Text(
-                    "View Transactions",
-                    style: TextStyle(color: Colors.white),
-                  ),
                 ),
               ],
             )),
