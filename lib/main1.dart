@@ -32,7 +32,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   left: 0,
                   child: Image.asset(
                     "assets/images/shop-logo.png",
-                    width: Size.width * 0.3,
                   ),
                 ),
                 Text(
