@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:firebase_trial_app/Screens/LoginSeller/loginseller.dart';
+import 'package:firebase_trial_app/Screens/LoginSeller/components/body.dart';
 import 'package:firebase_trial_app/Screens/LoginCustomer/logincustomer.dart';
 import 'package:firebase_trial_app/Screens/Welcome/components/background.dart';
 import 'package:firebase_trial_app/components/rounded_button.dart';
@@ -39,7 +39,7 @@ class Body extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return LoginSeller();
+                      return LoginScreen();
                     },
                   ),
                 );

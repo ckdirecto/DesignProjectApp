@@ -1,9 +1,5 @@
 [
     {
-        "merged": "/Users/claudeedirecto/Desktop/DesignApp/build/app/intermediates/res/merged/debug/drawable_launch_background.xml.flat",
-        "source": "/Users/claudeedirecto/Desktop/DesignApp/android/app/src/main/res/drawable/launch_background.xml"
-    },
-    {
         "merged": "/Users/claudeedirecto/Desktop/DesignApp/build/app/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher.png.flat",
         "source": "/Users/claudeedirecto/Desktop/DesignApp/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
     },
