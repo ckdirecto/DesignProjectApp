@@ -12,6 +12,9 @@ class LoginScreen extends StatefulWidget {
   _LoginScreenState createState() => _LoginScreenState();
 }
 
+// use credentials to log in
+// owner credentials: owner.plantshop@gmail.com; pass: design123
+
 class _LoginScreenState extends State<LoginScreen> {
   // form key
   final _formKey = GlobalKey<FormState>();

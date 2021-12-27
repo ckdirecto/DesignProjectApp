@@ -10,6 +10,9 @@ void main() {
   Firebase.initializeApp();
 }
 
+// main file ng connection sa db, if nililipat ko sa sariling
+// folder for db connection di gumagana lmao
+
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
 

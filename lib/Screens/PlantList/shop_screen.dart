@@ -3,6 +3,9 @@ import 'package:flutter/services.dart';
 import 'package:firebase_trial_app/Screens/PlantList/plant_model.dart';
 import 'package:firebase_trial_app/Screens/PlantList/plant_screen.dart';
 
+// kapag tapped yung items sa cart list, ma initiated tong code na to
+// these include plant descriptions etc
+
 class ShopScreen extends StatefulWidget {
   @override
   ShopScreenState createState() => ShopScreenState();

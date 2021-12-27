@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:firebase_trial_app/Screens/PlantList/plant_model.dart';
 
+// para sa mismong UI ng cartlist
+
 class PlantScreen extends StatefulWidget {
   final Plant? plant;
 

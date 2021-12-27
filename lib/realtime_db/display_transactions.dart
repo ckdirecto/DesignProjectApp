@@ -10,6 +10,8 @@ class RealtimeTransactionsDisplay extends StatefulWidget {
       RealtimeTransactionsDisplayState();
 }
 
+// does not show integers, dapat ang ma didisplay price, quantity and other info
+
 class RealtimeTransactionsDisplayState
     extends State<RealtimeTransactionsDisplay> {
   final databaseRef =

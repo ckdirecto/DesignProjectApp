@@ -1,3 +1,5 @@
+// eto yung temporary plant info na nasa app lang not connected sa firebase
+
 class Plant {
   final String? imageUrl;
   final String? name;

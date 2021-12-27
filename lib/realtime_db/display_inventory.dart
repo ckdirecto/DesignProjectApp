@@ -9,6 +9,9 @@ class RealtimeDatabaseDisplay extends StatefulWidget {
   RealtimeDatabaseDisplayState createState() => RealtimeDatabaseDisplayState();
 }
 
+// plant inventory only shows plants, walang kasamang no. of inventory
+// must include edit, delete, add inventory
+
 class RealtimeDatabaseDisplayState extends State<RealtimeDatabaseDisplay> {
   final databaseRef =
       FirebaseDatabase.instance.reference().child("Plant_Inventory");
