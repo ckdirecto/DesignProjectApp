@@ -2,7 +2,7 @@ import 'package:firebase_trial_app/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:firebase_trial_app/Screens/PlantList/plant_cartlist.dart';
+//import 'package:firebase_trial_app/Screens/PlantList/plant_cartlist.dart'; //Not used yet
 import 'package:firebase_trial_app/main1.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -20,8 +20,8 @@ class _LoginScreenState extends State<LoginScreen> {
   final _formKey = GlobalKey<FormState>();
 
   // editing controller
-  final TextEditingController emailController = new TextEditingController();
-  final TextEditingController passwordController = new TextEditingController();
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
 
   // firebase
   final _auth = FirebaseAuth.instance;
@@ -52,8 +52,8 @@ class _LoginScreenState extends State<LoginScreen> {
         },
         textInputAction: TextInputAction.next,
         decoration: InputDecoration(
-          prefixIcon: Icon(Icons.mail),
-          contentPadding: EdgeInsets.fromLTRB(20, 15, 20, 15),
+          prefixIcon: const Icon(Icons.mail),
+          contentPadding: const EdgeInsets.fromLTRB(20, 15, 20, 15),
           hintText: "Email",
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(25),
@@ -66,7 +66,7 @@ class _LoginScreenState extends State<LoginScreen> {
         controller: passwordController,
         obscureText: true,
         validator: (value) {
-          RegExp regex = new RegExp(r'^.{6,}$');
+          RegExp regex = RegExp(r'^.{6,}$');
           if (value!.isEmpty) {
             return ("Password is required for login");
           }
@@ -79,8 +79,8 @@ class _LoginScreenState extends State<LoginScreen> {
         },
         textInputAction: TextInputAction.done,
         decoration: InputDecoration(
-          prefixIcon: Icon(Icons.vpn_key),
-          contentPadding: EdgeInsets.fromLTRB(20, 15, 20, 15),
+          prefixIcon: const Icon(Icons.vpn_key),
+          contentPadding: const EdgeInsets.fromLTRB(20, 15, 20, 15),
           hintText: "Password",
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(25),
@@ -92,12 +92,12 @@ class _LoginScreenState extends State<LoginScreen> {
       borderRadius: BorderRadius.circular(30),
       color: primaryColor,
       child: MaterialButton(
-          padding: EdgeInsets.fromLTRB(20, 15, 20, 15),
+          padding: const EdgeInsets.fromLTRB(20, 15, 20, 15),
           minWidth: MediaQuery.of(context).size.width,
           onPressed: () {
             signIn(emailController.text, passwordController.text);
           },
-          child: Text(
+          child: const Text(
             "Login",
             textAlign: TextAlign.center,
             style: TextStyle(
@@ -125,7 +125,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           "assets/images/shop-logo.png",
                           fit: BoxFit.contain,
                         )),
-                    Text(
+                    const Text(
                       "plant shop",
                       style: TextStyle(
                         decoration: TextDecoration.none,
@@ -134,8 +134,8 @@ class _LoginScreenState extends State<LoginScreen> {
                         fontWeight: FontWeight.w400,
                       ),
                     ),
-                    SizedBox(height: 15),
-                    Text(
+                    const SizedBox(height: 15),
+                    const Text(
                       "Welcome, seller!",
                       style: TextStyle(
                         decoration: TextDecoration.none,
@@ -144,13 +144,13 @@ class _LoginScreenState extends State<LoginScreen> {
                         fontWeight: FontWeight.w400,
                       ),
                     ),
-                    SizedBox(height: 45),
+                    const SizedBox(height: 45),
                     emailField,
-                    SizedBox(height: 25),
+                    const SizedBox(height: 25),
                     passwordField,
-                    SizedBox(height: 35),
+                    const SizedBox(height: 35),
                     loginButton,
-                    SizedBox(height: 15),
+                    const SizedBox(height: 15),
                   ],
                 ),
               ),
@@ -169,8 +169,8 @@ class _LoginScreenState extends State<LoginScreen> {
             .signInWithEmailAndPassword(email: email, password: password)
             .then((uid) => {
                   Fluttertoast.showToast(msg: "Login Successful"),
-                  Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(builder: (context) => MyHomePage())),
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(
+                      builder: (context) => const MyHomePage())),
                 });
       } on FirebaseAuthException catch (error) {
         switch (error.code) {
@@ -197,7 +197,7 @@ class _LoginScreenState extends State<LoginScreen> {
             errorMessage = "An undefined Error happened.";
         }
         Fluttertoast.showToast(msg: errorMessage!);
-        print(error.code);
+        print(error.code); //decoding
       }
     }
   }

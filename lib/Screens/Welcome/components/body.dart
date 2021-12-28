@@ -6,6 +6,8 @@ import 'package:firebase_trial_app/components/rounded_button.dart';
 import 'package:firebase_trial_app/constants.dart';
 
 class Body extends StatelessWidget {
+  const Body({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -22,7 +24,7 @@ class Body extends StatelessWidget {
                 width: size.width * 0.3,
               ),
             ),
-            Text(
+            const Text(
               "plant shop",
               style: TextStyle(
                 decoration: TextDecoration.none,
@@ -39,7 +41,7 @@ class Body extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return LoginScreen();
+                      return const LoginScreen();
                     },
                   ),
                 );
@@ -54,7 +56,7 @@ class Body extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return LoginCustomer();
+                      return const LoginCustomer();
                     },
                   ),
                 );

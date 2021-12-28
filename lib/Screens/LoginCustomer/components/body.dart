@@ -25,7 +25,7 @@ class Body extends StatelessWidget {
                 width: size.width * 0.3,
               ),
             ),
-            Text(
+            const Text(
               "plant shop",
               style: TextStyle(
                 decoration: TextDecoration.none,
@@ -35,7 +35,7 @@ class Body extends StatelessWidget {
               ),
             ),
             SizedBox(height: size.height * 0.07),
-            Text(
+            const Text(
               "Welcome, customer!",
               style: TextStyle(
                 decoration: TextDecoration.none,
@@ -56,7 +56,7 @@ class Body extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return ShopScreen();
+                      return const ShopScreen();
                     },
                   ),
                 );

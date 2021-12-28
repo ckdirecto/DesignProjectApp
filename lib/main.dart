@@ -3,7 +3,7 @@ import 'package:firebase_trial_app/Screens/Welcome/welcome_screen.dart';
 import 'package:firebase_trial_app/constants.dart';
 import 'package:firebase_core/firebase_core.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
               primaryColor: primaryColor,
               scaffoldBackgroundColor: Colors.white,
             ),
-            home: WelcomeScreen(),
+            home: const WelcomeScreen(),
           );
         });
   }
