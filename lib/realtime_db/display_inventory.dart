@@ -13,8 +13,7 @@ class RealtimeDatabaseDisplay extends StatefulWidget {
 // must include edit, delete, add inventory
 
 class RealtimeDatabaseDisplayState extends State<RealtimeDatabaseDisplay> {
-  final databaseRef =
-      FirebaseDatabase.instance.reference().child("Plant_Inventory");
+  final databaseRef = FirebaseDatabase.instance.ref().child("Plant_Inventory");
 
   @override
   Widget build(BuildContext context) {
@@ -24,13 +23,13 @@ class RealtimeDatabaseDisplayState extends State<RealtimeDatabaseDisplay> {
         query: databaseRef,
         itemBuilder: (BuildContext context, DataSnapshot snapshot,
             Animation<double> animation, int index) {
-          var x = snapshot.value['Common_Name'];
+          //var x = snapshot.value['Common_Name'];
           // ignore: avoid_print
-          print(x);
+          //print(x);
           return ListTile(
-            subtitle: Text(snapshot.value['Scientific_Name']),
-            title: Text(snapshot.value['Common_Name']),
-          );
+              //subtitle: Text(snapshot.value['Scientific_Name']),
+              //title: Text(snapshot.value['Common_Name']),
+              );
         },
       )),
     );

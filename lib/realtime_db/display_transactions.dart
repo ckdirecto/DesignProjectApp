@@ -14,8 +14,7 @@ class RealtimeTransactionsDisplay extends StatefulWidget {
 
 class RealtimeTransactionsDisplayState
     extends State<RealtimeTransactionsDisplay> {
-  final databaseRef =
-      FirebaseDatabase.instance.reference().child("Transaction");
+  final databaseRef = FirebaseDatabase.instance.ref().child("Transaction");
 
   @override
   Widget build(BuildContext context) {
@@ -25,13 +24,13 @@ class RealtimeTransactionsDisplayState
         query: databaseRef,
         itemBuilder: (BuildContext context, DataSnapshot snapshot,
             Animation<double> animation, int index) {
-          var x = snapshot.value['Date'];
+          //var x = snapshot.value['Date'];
           // ignore: avoid_print
-          print(x);
+          //print(x);
           return ListTile(
-            subtitle: Text(snapshot.value['Date']),
-            title: Text(snapshot.value['Date']),
-          );
+              //subtitle: Text(snapshot.value['Date']),
+              //title: Text(snapshot.value['Date']),
+              );
         },
       )),
     );
