@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_trial_app/Screens/LoginSeller/loginseller.dart';
 import 'package:firebase_trial_app/Screens/LoginCustomer/logincustomer.dart';
-import 'package:firebase_trial_app/Screens/Welcome/components/background.dart';
+import 'package:firebase_trial_app/components/background.dart';
 import 'package:firebase_trial_app/components/rounded_button.dart';
 import 'package:firebase_trial_app/constants.dart';
 

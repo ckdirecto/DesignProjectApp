@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_trial_app/Screens/Welcome/welcome_screen.dart';
 import 'package:firebase_trial_app/constants.dart';
 import 'package:firebase_core/firebase_core.dart';
+// ignore: unused_import
 import 'package:firebase_database/firebase_database.dart';
 
 Future<void> main() async {
@@ -19,9 +20,11 @@ class MyApp extends StatelessWidget {
         future: _fbApp,
         builder: (context, snapshot) {
           if (snapshot.hasError) {
+            // ignore: avoid_print
             print('You have an error! ${snapshot.error.toString()}');
             return const Text('Something went wrong');
           } else if (snapshot.hasData) {
+            // ignore: avoid_print
             print('Firebase Connected');
             return MaterialApp(
               debugShowCheckedModeBanner: false,

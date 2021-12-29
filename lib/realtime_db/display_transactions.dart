@@ -27,7 +27,7 @@ class RealtimeTransactionsDisplayState
           //var x = snapshot.value['Date'];
           // ignore: avoid_print
           //print(x);
-          return ListTile(
+          return const ListTile(
               //subtitle: Text(snapshot.value['Date']),
               //title: Text(snapshot.value['Date']),
               );

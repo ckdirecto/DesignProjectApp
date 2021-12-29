@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:firebase_trial_app/Screens/Welcome/components/background.dart';
+import 'package:firebase_trial_app/components/background.dart';
 import 'package:firebase_trial_app/constants.dart';
 import 'package:firebase_trial_app/components/optionseller.dart';
 import 'package:firebase_trial_app/Screens/Inventory/inventory.dart';

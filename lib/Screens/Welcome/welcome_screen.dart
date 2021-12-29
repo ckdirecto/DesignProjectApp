@@ -10,6 +10,7 @@ class WelcomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: unused_local_variable
     final DatabaseReference ref =
         FirebaseDatabase.instance.ref('Plant_Inventory/1');
     Size size = MediaQuery.of(context).size;
