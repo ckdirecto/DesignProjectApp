@@ -1,18 +1,42 @@
 import 'package:firebase_trial_app/Screens/LoginCustomer/logincustomer.dart';
 import 'package:firebase_trial_app/Screens/LoginSeller/components/body.dart';
 import 'package:firebase_trial_app/components/rounded_button.dart';
+import 'package:firebase_trial_app/components/transaction.dart';
 import 'package:firebase_trial_app/constants.dart';
 import 'package:flutter/material.dart';
+import 'dart:convert';
 import 'package:firebase_database/firebase_database.dart';
 
-class WelcomeScreen extends StatelessWidget {
+class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
 
   @override
+  State<WelcomeScreen> createState() => _WelcomeScreenState();
+}
+
+class _WelcomeScreenState extends State<WelcomeScreen> {
+  @override
+  void initState() {
+    super.initState();
+    _FetchTransaction();
+  }
+
+  final DatabaseReference _database = FirebaseDatabase.instance.ref();
+  void _FetchTransaction() {
+    _database.child('Transaction').get().then((DataSnapshot snapshot) {
+      if (snapshot.exists) {
+        final data = Map<String, dynamic>.from(snapshot.value as Map);
+        print('Map');
+        print(data);
+        final TransactionList dataList = TransactionList.fromRTDB(data);
+        print('ID:');
+        print(dataList.getTransactionIdList());
+      }
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
-    // ignore: unused_local_variable
-    final DatabaseReference ref =
-        FirebaseDatabase.instance.ref('Plant_Inventory/1');
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       body: SizedBox(
@@ -80,5 +104,11 @@ class WelcomeScreen extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  @override
+  State<StatefulWidget> createState() {
+    // TODO: implement createState
+    throw UnimplementedError();
   }
 }
