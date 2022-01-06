@@ -26,11 +26,9 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
     _database.child('Transaction').get().then((DataSnapshot snapshot) {
       if (snapshot.exists) {
         final data = Map<String, dynamic>.from(snapshot.value as Map);
-        print('Map');
-        print(data);
-        final TransactionList dataList = TransactionList.fromRTDB(data);
-        print('ID:');
-        print(dataList.getTransactionIdList());
+        final Map<String, dynamic> data2 = new Map<String, dynamic>.from(data);
+        // Map<String, dynamic> map = json.decode(data.toString());
+        final TransactionList dataList = TransactionList.fromRTDB(data2);
       }
     });
   }

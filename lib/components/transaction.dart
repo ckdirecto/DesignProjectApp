@@ -9,10 +9,10 @@ class TransactionList {
   });
 
   factory TransactionList.fromRTDB(Map<String, dynamic> data) {
-    List<TransactionObj>? rawTransactionObj;
+    List<TransactionObj> rawTransactionObj = [];
     for (var x in data.keys) {
-      Map<String, dynamic> rawData = data[x];
-      rawTransactionObj!.add(TransactionObj.fromRTDB(rawData));
+      final rawData = Map<String, dynamic>.from(data[x] as Map);
+      rawTransactionObj.add(TransactionObj.fromRTDB(rawData));
     }
     return TransactionList(
       listTransactionObj: rawTransactionObj,
@@ -30,7 +30,7 @@ class TransactionList {
 
 class TransactionObj {
   final int transactionId;
-  final DateTime date;
+  final String date; //Temporary fix.
   final List<ItemObj> item;
   final int totalAmount;
 
@@ -42,11 +42,18 @@ class TransactionObj {
   });
 
   factory TransactionObj.fromRTDB(Map<String, dynamic> data) {
+    List<ItemObj> tempItemList = [];
+    Map<String, dynamic> items =
+        Map<String, dynamic>.from(data['items'] as Map);
+    for (var x in items.keys) {
+      final temp = Map<String, dynamic>.from(items[x] as Map);
+      tempItemList.add(ItemObj.fromMap(temp));
+    }
     return TransactionObj(
       transactionId: data['TransactionID'] ?? 0,
       date: data['Date'] ?? '1/1/2000',
       totalAmount: data['Total_Amount'] ?? 0.00,
-      item: List<ItemObj>.from(data["items"].map((x) => ItemObj.fromMap(x))),
+      item: tempItemList,
     );
   }
 
@@ -62,7 +69,10 @@ class ItemObj {
   ItemObj({required this.quantity, required this.itemId});
 
   factory ItemObj.fromMap(Map<String, dynamic> data) {
-    return ItemObj(quantity: data['quantity'], itemId: data['itemID']);
+    return ItemObj(
+      quantity: data['Quantity'] ?? 0,
+      itemId: data['ItemID'] ?? 0,
+    );
   }
 
   Map<String, dynamic> toJson() => {
