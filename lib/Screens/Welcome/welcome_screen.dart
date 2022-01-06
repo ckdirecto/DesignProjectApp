@@ -27,7 +27,6 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
       if (snapshot.exists) {
         final data = Map<String, dynamic>.from(snapshot.value as Map);
         final Map<String, dynamic> data2 = new Map<String, dynamic>.from(data);
-        // Map<String, dynamic> map = json.decode(data.toString());
         final TransactionList dataList = TransactionList.fromRTDB(data2);
       }
     });

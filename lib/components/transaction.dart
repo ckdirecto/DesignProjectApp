@@ -19,8 +19,9 @@ class TransactionList {
     );
   }
 
-  List<int> getTransactionIdList() {
-    List<int> _list = [];
+  //Returns a list of transaction id.
+  List<String> getTransactionIdList() {
+    List<String> _list = [];
     for (TransactionObj x in listTransactionObj!) {
       _list.add(x.transactionId);
     }
@@ -29,7 +30,7 @@ class TransactionList {
 }
 
 class TransactionObj {
-  final int transactionId;
+  final String transactionId;
   final String date; //Temporary fix.
   final List<ItemObj> item;
   final int totalAmount;
@@ -50,15 +51,11 @@ class TransactionObj {
       tempItemList.add(ItemObj.fromMap(temp));
     }
     return TransactionObj(
-      transactionId: data['TransactionID'] ?? 0,
+      transactionId: data['TransactionId'] ?? "",
       date: data['Date'] ?? '1/1/2000',
       totalAmount: data['Total_Amount'] ?? 0.00,
       item: tempItemList,
     );
-  }
-
-  int getTransactionId() {
-    return transactionId;
   }
 }
 
