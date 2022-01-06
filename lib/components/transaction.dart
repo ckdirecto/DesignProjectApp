@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_database/firebase_database.dart';
+import 'package:firebase_trial_app/Screens/Transactions/transactions.dart';
 
 class TransactionList {
   final List<TransactionObj>? listTransactionObj;
@@ -26,6 +27,21 @@ class TransactionList {
       _list.add(x.transactionId);
     }
     return _list;
+  }
+
+  //Returns the total amount of a transactionId.
+  int getTotalAmount(String transactionId) {
+    return getTransactionObj(transactionId).totalAmount;
+  }
+
+  //Returns the TransactionObj based on transactionId.
+  TransactionObj getTransactionObj(String transactionId) {
+    for (TransactionObj x in listTransactionObj!) {
+      if (transactionId == x.transactionId) {
+        return x;
+      }
+    }
+    return TransactionObj.empty();
   }
 }
 
@@ -57,6 +73,11 @@ class TransactionObj {
       item: tempItemList,
     );
   }
+
+  factory TransactionObj.empty() {
+    return TransactionObj(
+        transactionId: "", date: "", totalAmount: 0, item: [ItemObj.empty()]);
+  }
 }
 
 class ItemObj {
@@ -70,6 +91,10 @@ class ItemObj {
       quantity: data['Quantity'] ?? 0,
       itemId: data['ItemID'] ?? 0,
     );
+  }
+
+  factory ItemObj.empty() {
+    return ItemObj(quantity: 0, itemId: 0);
   }
 
   Map<String, dynamic> toJson() => {
