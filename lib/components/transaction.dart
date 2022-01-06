@@ -29,6 +29,16 @@ class TransactionList {
     return _list;
   }
 
+  //Returns a list of items based on transactionId.
+  List<ItemObj> getTrasactionItems(String transactionId) {
+    for (TransactionObj x in listTransactionObj!) {
+      if (transactionId == x.transactionId) {
+        return x.item;
+      }
+    }
+    return [ItemObj.empty()];
+  }
+
   //Returns the total amount of a transactionId.
   int getTotalAmount(String transactionId) {
     return getTransactionObj(transactionId).totalAmount;
