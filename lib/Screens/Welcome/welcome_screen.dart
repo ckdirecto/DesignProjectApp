@@ -28,6 +28,8 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
         final data = Map<String, dynamic>.from(snapshot.value as Map);
         final Map<String, dynamic> data2 = new Map<String, dynamic>.from(data);
         final TransactionList dataList = TransactionList.fromRTDB(data2);
+        print(dataList.getTransactionIdList());
+        print(data2);
       }
     });
   }

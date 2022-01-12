@@ -1,17 +1,44 @@
+import 'dart:js';
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_trial_app/Screens/PlantList/shop_screen.dart';
 import 'package:firebase_trial_app/Screens/LoginCustomer/components/background.dart';
 import 'package:firebase_trial_app/components/rounded_button.dart';
 import 'package:firebase_trial_app/components/rounded_input_field.dart';
+import 'package:firebase_trial_app/components/transaction.dart';
 
-class Body extends StatelessWidget {
+class Body extends StatefulWidget {
   const Body({
     Key? key,
   }) : super(key: key);
 
   @override
+  State<Body> createState() => _BodyState();
+}
+
+class _BodyState extends State<Body> {
+  @override
+  void initState() {
+    super.initState();
+    _FetchTransaction();
+  }
+
+  final DatabaseReference _database = FirebaseDatabase.instance.ref();
+  void _FetchTransaction() {
+    _database.child('Transaction').get().then((DataSnapshot snapshot) {
+      if (snapshot.exists) {
+        final data = Map<String, dynamic>.from(snapshot.value as Map);
+        final Map<String, dynamic> data2 = new Map<String, dynamic>.from(data);
+        final List<String> dataList =
+            TransactionList.fromRTDB(data2).getTransactionIdList();
+      }
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    String pin = '';
     return Background(
       child: SingleChildScrollView(
         child: Column(
@@ -47,18 +74,16 @@ class Body extends StatelessWidget {
             SizedBox(height: size.height * 0.04),
             RoundedInputField(
               hintText: "Enter generated pin",
-              onChanged: (value) {},
+              onChanged: (value) {
+                pin = value;
+              },
             ),
             RoundedButton(
               text: "Proceed",
               press: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return const ShopScreen();
-                    },
-                  ),
+                  verifyPin(int.parse(pin)),
                 );
               },
             ),
@@ -67,5 +92,13 @@ class Body extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  //Eto Clodiiii
+  MaterialPageRoute verifyPin(int pin) {
+    //Eto clodii lagyan mo ng if statement.
+    return MaterialPageRoute(builder: (context) {
+      return const ShopScreen();
+    });
   }
 }
