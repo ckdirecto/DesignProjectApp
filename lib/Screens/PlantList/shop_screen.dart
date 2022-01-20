@@ -33,10 +33,10 @@ class ShopScreenState extends State<ShopScreen>
           value = pageController!.page! - index;
           value = (1 - (value.abs() * 0.1)).clamp(0.1, 1.0);
         }
-        return Center(
+        return Container(
           child: SizedBox(
-            height: Curves.easeInOut.transform(value) * 180.0,
-            width: Curves.easeInOut.transform(value) * 380.0,
+            height: 180,
+            width: 380,
             child: widget,
           ),
         );
@@ -160,12 +160,12 @@ class ShopScreenState extends State<ShopScreen>
                 ),
               ),
             ),
-            const SizedBox(height: 40.0),
+            const SizedBox(height: 10.0),
             SizedBox(
-              height: 200.0,
+              height: 550,
               width: double.infinity,
               child: PageView.builder(
-                scrollDirection: Axis.horizontal,
+                scrollDirection: Axis.vertical,
                 controller: pageController,
                 onPageChanged: (int index) {
                   setState(() {
