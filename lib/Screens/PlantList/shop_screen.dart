@@ -33,6 +33,7 @@ class ShopScreenState extends State<ShopScreen>
           value = pageController!.page! - index;
           value = (1 - (value.abs() * 0.1)).clamp(0.1, 1.0);
         }
+        // ignore: avoid_unnecessary_containers
         return Container(
           child: SizedBox(
             height: 180,
