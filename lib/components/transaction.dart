@@ -1,7 +1,3 @@
-import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_database/firebase_database.dart';
-import 'package:firebase_trial_app/Screens/Transactions/transactions.dart';
-
 class TransactionList {
   final List<TransactionObj>? listTransactionObj;
 

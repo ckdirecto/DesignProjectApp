@@ -1,4 +1,3 @@
-import 'dart:js';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_trial_app/Screens/PlantList/shop_screen.dart';
@@ -20,15 +19,17 @@ class _BodyState extends State<Body> {
   @override
   void initState() {
     super.initState();
-    _FetchTransaction();
+    fetchTransaction();
   }
 
   final DatabaseReference _database = FirebaseDatabase.instance.ref();
-  void _FetchTransaction() {
+  void fetchTransaction() {
     _database.child('Transaction').get().then((DataSnapshot snapshot) {
       if (snapshot.exists) {
         final data = Map<String, dynamic>.from(snapshot.value as Map);
-        final Map<String, dynamic> data2 = new Map<String, dynamic>.from(data);
+        final Map<String, dynamic> data2 = Map<String, dynamic>.from(data);
+
+        //Variable where transactionIDList is stored.
         final List<String> dataList =
             TransactionList.fromRTDB(data2).getTransactionIdList();
       }

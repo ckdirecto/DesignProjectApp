@@ -1,11 +1,8 @@
 import 'package:firebase_trial_app/Screens/LoginCustomer/logincustomer.dart';
 import 'package:firebase_trial_app/Screens/LoginSeller/components/body.dart';
 import 'package:firebase_trial_app/components/rounded_button.dart';
-import 'package:firebase_trial_app/components/transaction.dart';
 import 'package:firebase_trial_app/constants.dart';
 import 'package:flutter/material.dart';
-import 'dart:convert';
-import 'package:firebase_database/firebase_database.dart';
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
@@ -18,20 +15,6 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   @override
   void initState() {
     super.initState();
-    _FetchTransaction();
-  }
-
-  final DatabaseReference _database = FirebaseDatabase.instance.ref();
-  void _FetchTransaction() {
-    _database.child('Transaction').get().then((DataSnapshot snapshot) {
-      if (snapshot.exists) {
-        final data = Map<String, dynamic>.from(snapshot.value as Map);
-        final Map<String, dynamic> data2 = new Map<String, dynamic>.from(data);
-        final TransactionList dataList = TransactionList.fromRTDB(data2);
-        print(dataList.getTransactionIdList());
-        print(data2);
-      }
-    });
   }
 
   @override
@@ -103,11 +86,5 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
         ),
       ),
     );
-  }
-
-  @override
-  State<StatefulWidget> createState() {
-    // TODO: implement createState
-    throw UnimplementedError();
   }
 }
