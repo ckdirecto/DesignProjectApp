@@ -7,6 +7,8 @@ import 'package:firebase_trial_app/Screens/PlantList/plant_screen.dart';
 // these include plant descriptions etc
 
 class ShopScreen extends StatefulWidget {
+  const ShopScreen({Key? key}) : super(key: key);
+
   @override
   ShopScreenState createState() => ShopScreenState();
 }
@@ -31,10 +33,11 @@ class ShopScreenState extends State<ShopScreen>
           value = pageController!.page! - index;
           value = (1 - (value.abs() * 0.1)).clamp(0.1, 1.0);
         }
-        return Center(
+        // ignore: avoid_unnecessary_containers
+        return Container(
           child: SizedBox(
-            height: Curves.easeInOut.transform(value) * 180.0,
-            width: Curves.easeInOut.transform(value) * 380.0,
+            height: 180,
+            width: 380,
             child: widget,
           ),
         );
@@ -53,10 +56,10 @@ class ShopScreenState extends State<ShopScreen>
           children: <Widget>[
             Container(
               decoration: BoxDecoration(
-                color: Color(0xFF32A060),
+                color: const Color(0xFF32A060),
                 borderRadius: BorderRadius.circular(25.0),
               ),
-              margin: EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 30.0),
+              margin: const EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 30.0),
               child: Stack(
                 children: <Widget>[
                   Center(
@@ -77,7 +80,7 @@ class ShopScreenState extends State<ShopScreen>
                     right: 30.0,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
-                      children: <Widget>[
+                      children: const <Widget>[
                         Text(
                           'FROM',
                           style: TextStyle(
@@ -86,7 +89,8 @@ class ShopScreenState extends State<ShopScreen>
                           ),
                         ),
                         Text(
-                          '\P${plants[index].price}',
+                          //not be immutable
+                          '\${plants[index].price}',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 25.0,
@@ -104,15 +108,15 @@ class ShopScreenState extends State<ShopScreen>
                       children: <Widget>[
                         Text(
                           plants[index].category!.toUpperCase(),
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Colors.white,
                             fontSize: 15.0,
                           ),
                         ),
-                        SizedBox(height: 5.0),
+                        const SizedBox(height: 5.0),
                         Text(
                           plants[index].name!,
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Colors.white,
                             fontSize: 25.0,
                             fontWeight: FontWeight.w600,
@@ -137,17 +141,17 @@ class ShopScreenState extends State<ShopScreen>
       body: AnnotatedRegion<SystemUiOverlayStyle>(
         value: SystemUiOverlayStyle.dark,
         child: ListView(
-          padding: EdgeInsets.symmetric(vertical: 60.0),
+          padding: const EdgeInsets.symmetric(vertical: 60.0),
           children: <Widget>[
             Padding(
-              padding: EdgeInsets.symmetric(vertical: 10.0),
+              padding: const EdgeInsets.symmetric(vertical: 10.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[],
+                children: const <Widget>[], // Nani?
               ),
             ),
-            SizedBox(height: 20.0),
-            Padding(
+            const SizedBox(height: 20.0),
+            const Padding(
               padding: EdgeInsets.only(left: 30.0),
               child: Text(
                 'Plant Cart List',
@@ -157,12 +161,12 @@ class ShopScreenState extends State<ShopScreen>
                 ),
               ),
             ),
-            SizedBox(height: 40.0),
-            Container(
-              height: 200.0,
+            const SizedBox(height: 10.0),
+            SizedBox(
+              height: 550,
               width: double.infinity,
               child: PageView.builder(
-                scrollDirection: Axis.horizontal,
+                scrollDirection: Axis.vertical,
                 controller: pageController,
                 onPageChanged: (int index) {
                   setState(() {

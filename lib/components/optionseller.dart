@@ -17,7 +17,7 @@ class OptionSellerButton extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 10),
+      margin: const EdgeInsets.symmetric(vertical: 10),
       width: size.width * 0.8,
       child: ClipRRect(
         borderRadius: BorderRadius.circular(35),
@@ -35,7 +35,7 @@ class OptionSellerButton extends StatelessWidget {
       onPressed: press as void Function()?,
       style: ElevatedButton.styleFrom(
           primary: color,
-          padding: EdgeInsets.symmetric(horizontal: 40, vertical: 45),
+          padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 45),
           textStyle: TextStyle(
               color: textColor,
               fontSize: 18,

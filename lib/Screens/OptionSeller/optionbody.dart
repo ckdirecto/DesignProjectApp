@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:firebase_trial_app/Screens/Welcome/components/background.dart';
+import 'package:firebase_trial_app/components/background.dart';
 import 'package:firebase_trial_app/constants.dart';
 import 'package:firebase_trial_app/components/optionseller.dart';
 import 'package:firebase_trial_app/Screens/Inventory/inventory.dart';
 import 'package:firebase_trial_app/Screens/Transactions/transactions.dart';
 
 class OptionSellerBody extends StatelessWidget {
+  const OptionSellerBody({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -22,7 +24,7 @@ class OptionSellerBody extends StatelessWidget {
                 width: size.width * 0.3,
               ),
             ),
-            Text(
+            const Text(
               "plant shop",
               style: TextStyle(
                 decoration: TextDecoration.none,
@@ -40,7 +42,7 @@ class OptionSellerBody extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return Inventory();
+                      return const Inventory();
                     },
                   ),
                 );
@@ -55,7 +57,7 @@ class OptionSellerBody extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return Transaction();
+                      return const Transaction();
                     },
                   ),
                 );

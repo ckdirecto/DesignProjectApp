@@ -27,7 +27,7 @@ class _MyHomePageState extends State<MyHomePage> {
         body: SafeArea(
       child: Center(
         child: Padding(
-            padding: EdgeInsets.all(80.0),
+            padding: const EdgeInsets.all(80.0),
             child: Column(
               children: <Widget>[
                 Positioned(
@@ -37,7 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     "assets/images/shop-logo.png",
                   ),
                 ),
-                Text(
+                const Text(
                   "plant shop",
                   style: TextStyle(
                     decoration: TextDecoration.none,

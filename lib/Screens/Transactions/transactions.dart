@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_trial_app/Screens/LoginSeller/loginseller.dart';
 import 'package:firebase_trial_app/Screens/LoginCustomer/logincustomer.dart';
-import 'package:firebase_trial_app/Screens/Welcome/components/background.dart';
+import 'package:firebase_trial_app/components/background.dart';
 import 'package:firebase_trial_app/components/rounded_button.dart';
 import 'package:firebase_trial_app/constants.dart';
 
 class Transaction extends StatelessWidget {
+  const Transaction({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -22,7 +24,7 @@ class Transaction extends StatelessWidget {
                 width: size.width * 0.3,
               ),
             ),
-            Text(
+            const Text(
               "plant shop",
               style: TextStyle(
                 decoration: TextDecoration.none,
@@ -39,7 +41,7 @@ class Transaction extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return LoginSeller();
+                      return const LoginSeller();
                     },
                   ),
                 );
@@ -54,7 +56,7 @@ class Transaction extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return LoginCustomer();
+                      return const LoginCustomer();
                     },
                   ),
                 );

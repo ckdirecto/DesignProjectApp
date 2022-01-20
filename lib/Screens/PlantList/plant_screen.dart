@@ -7,7 +7,7 @@ import 'package:firebase_trial_app/Screens/PlantList/plant_model.dart';
 class PlantScreen extends StatefulWidget {
   final Plant? plant;
 
-  PlantScreen({this.plant});
+  const PlantScreen({Key? key, this.plant}) : super(key: key);
 
   @override
   PlantScreenState createState() => PlantScreenState();
@@ -17,7 +17,7 @@ class PlantScreenState extends State<PlantScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.black,
       body: AnnotatedRegion<SystemUiOverlayStyle>(
         value: SystemUiOverlayStyle.light,
         child: SingleChildScrollView(
@@ -26,13 +26,13 @@ class PlantScreenState extends State<PlantScreen> {
               Stack(
                 children: <Widget>[
                   Container(
-                    padding: EdgeInsets.only(
+                    padding: const EdgeInsets.only(
                       left: 30.0,
                       right: 30.0,
                       top: 60.0,
                     ),
                     height: 520.0,
-                    color: Color(0xFF32A060),
+                    color: const Color(0xFF32A060),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
@@ -41,7 +41,7 @@ class PlantScreenState extends State<PlantScreen> {
                           children: <Widget>[
                             GestureDetector(
                               onTap: () => Navigator.pop(context),
-                              child: Icon(
+                              child: const Icon(
                                 Icons.arrow_back,
                                 size: 30.0,
                                 color: Colors.white,
@@ -49,58 +49,58 @@ class PlantScreenState extends State<PlantScreen> {
                             ),
                           ],
                         ),
-                        SizedBox(height: 20.0),
+                        const SizedBox(height: 20.0),
                         Text(
                           widget.plant!.category!.toUpperCase(),
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Colors.white,
                             fontSize: 15.0,
                           ),
                         ),
-                        SizedBox(height: 5.0),
+                        const SizedBox(height: 5.0),
                         Text(
                           widget.plant!.name!,
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Colors.white,
                             fontSize: 30.0,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        SizedBox(height: 40.0),
-                        Text(
+                        const SizedBox(height: 40.0),
+                        const Text(
                           'FROM',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 15.0,
                           ),
                         ),
-                        SizedBox(height: 5.0),
+                        const SizedBox(height: 5.0),
                         Text(
-                          '\PHP ${widget.plant!.price}',
-                          style: TextStyle(
+                          'PHP ${widget.plant!.price}',
+                          style: const TextStyle(
                             color: Colors.white,
                             fontSize: 25.0,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        SizedBox(height: 40.0),
-                        Text(
+                        const SizedBox(height: 40.0),
+                        const Text(
                           'SIZE',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 15.0,
                           ),
                         ),
-                        SizedBox(height: 5.0),
+                        const SizedBox(height: 5.0),
                         Text(
                           widget.plant!.size!,
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Colors.white,
                             fontSize: 25.0,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        SizedBox(height: 40.0),
+                        const SizedBox(height: 40.0),
                       ],
                     ),
                   ),
@@ -130,7 +130,7 @@ class PlantScreenState extends State<PlantScreen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Padding(
-                      padding: EdgeInsets.only(
+                      padding: const EdgeInsets.only(
                         left: 30.0,
                         right: 30.0,
                         top: 40.0,
@@ -138,17 +138,17 @@ class PlantScreenState extends State<PlantScreen> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
-                          Text(
+                          const Text(
                             'Plant Description',
                             style: TextStyle(
                               fontSize: 24.0,
                               fontWeight: FontWeight.w600,
                             ),
                           ),
-                          SizedBox(height: 10.0),
+                          const SizedBox(height: 10.0),
                           Text(
                             widget.plant!.description!,
-                            style: TextStyle(
+                            style: const TextStyle(
                               color: Colors.black87,
                               fontSize: 16.0,
                             ),
@@ -157,13 +157,13 @@ class PlantScreenState extends State<PlantScreen> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.symmetric(
+                      padding: const EdgeInsets.symmetric(
                         horizontal: 30.0,
                         vertical: 40.0,
                       ),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[],
+                        children: const <Widget>[], //Nani?
                       ),
                     ),
                   ],
