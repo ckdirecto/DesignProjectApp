@@ -1,3 +1,5 @@
+import 'package:firebase_database/firebase_database.dart';
+import 'package:firebase_trial_app/components/inventory.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:firebase_trial_app/Screens/PlantList/plant_model.dart';
@@ -17,11 +19,39 @@ class ShopScreenState extends State<ShopScreen>
     with SingleTickerProviderStateMixin {
   PageController? pageController;
   int selectedPage = 0;
+  List<PlantObj> plantList = [];
 
   @override
   void initState() {
     super.initState();
     pageController = PageController(initialPage: 0, viewportFraction: 0.8);
+    fetchTransaction();
+  }
+
+  final DatabaseReference _database = FirebaseDatabase.instance.ref();
+  void fetchTransaction() {
+    _database.child('Plant_Inventory').get().then((DataSnapshot snapshot) {
+      if (snapshot.exists) {
+        final List<dynamic> data = snapshot.value as List;
+        //final data = List<Object>.from(snapshot.value as List);
+        for (var x in data) {
+          if (x != null) {
+            final Map<String, dynamic> data2 = Map<String, dynamic>.from(x);
+            plantList.add(PlantObj(
+                careNeeds: data2['Care_Needs'],
+                commonName: data2['Common_Name'],
+                description: data2['Description'],
+                lightExposure: data2['Light_Exposure'],
+                imageUrl: data2['Photo'],
+                plantID: data2['Plant_ID'],
+                price: data2['Price'],
+                scientificName: data2['Scientific_Name'],
+                stock: data2['Stock'],
+                waterUse: data2['Water_Use']));
+          } else {}
+        }
+      }
+    });
   }
 
   plantSelector(int index) {

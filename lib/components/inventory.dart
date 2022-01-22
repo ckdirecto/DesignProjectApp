@@ -20,7 +20,7 @@ class PlantObj {
   final String commonName;
   final String description;
   final String lightExposure;
-  final String photoLink;
+  final String imageUrl;
   final String plantID;
   final int price;
   final String scientificName;
@@ -32,7 +32,7 @@ class PlantObj {
       required this.commonName,
       required this.description,
       required this.lightExposure,
-      required this.photoLink,
+      required this.imageUrl,
       required this.plantID,
       required this.price,
       required this.scientificName,
@@ -45,7 +45,7 @@ class PlantObj {
       commonName: data['Common_Name'] ?? "Null",
       description: data['Description'] ?? "Null",
       lightExposure: data['Light_Exposure'] ?? "Null",
-      photoLink: data['Photo'] ?? "Null",
+      imageUrl: data['Photo'] ?? "Null",
       plantID: data['Plant_ID'] ?? 0,
       price: data['Price'] ?? 0,
       scientificName: data['Scientific_Name'] ?? "Null",
